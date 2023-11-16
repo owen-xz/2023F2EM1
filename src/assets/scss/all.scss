@@ -1,0 +1,49 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "./_variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+p {
+  margin-bottom: 0;
+}
+@font-face {
+  font-family: Mantou;
+  src: url(../font/MantouSans-Regular.ttf);
+}
+.text-mantou {
+  font-family: Mantou, serif;
+}
+@mixin primaryGradient {
+  background: linear-gradient(to right, #E5793B, #FF4185);
+  background: -webkit-linear-gradient(to right, #E5793B, #FF4185);
+}
+.text-primaryGrandient {
+  @include primaryGradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.bg-primaryGrandient {
+  @include primaryGradient;
+}
+
+@each $key, $value in $spacers {
+  .rounded-#{$key} {
+    border-radius: $value !important;
+  }
+}
+
+.img-object-fit {
+  object-fit: cover;
+  object-position: center;
+}
+
+.cursor-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
