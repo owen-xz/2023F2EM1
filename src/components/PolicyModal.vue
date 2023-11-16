@@ -87,7 +87,7 @@ const nowIndex = ref(0)
               </h2>
               <div class="pb-8 mb-16">
                 <template
-                  v-for="(item, index) in policyList[nowIndex].content"
+                  v-for="item in policyList[nowIndex].content"
                   :key="index"
                 >
                   <p class="h5 fw-bold mb-2">{{ item.subtitle }}</p>
